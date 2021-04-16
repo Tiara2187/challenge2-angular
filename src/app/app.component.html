@@ -1,0 +1,31 @@
+<ol>
+  <li>Add a Input field which updates a property ('username') via Two-Way-Binding</li>
+  <li>Output the username property via String Interpolation (in a paragraph below the input)</li>
+  <li>Add a button which may only be clicked if the username is NOT an empty string</li>
+  <li>Upon clicking the button, the username should be reset to an empty string</li>
+</ol>
+
+<!-- Passing and using Data with event -->
+<label for="">Username</label>
+<!-- <input type="text" (input)="onUpdateServerName($event)"/> -->
+
+<!-- Two Two-Way-Binding -->
+<input type="text" [(ngModel)]="serverName"/>
+
+<p>{{serverName}}</p>
+
+<button [disabled]="allowNewServer" (click)="serverName = '' ">Reset</button> <br><br>
+
+
+<!-- click enventbinding -->
+<p>{{serverCreationStatus}}</p>
+
+<!-- <button [disabled]="!allowNewServer">Add Server</button> -->
+
+<div class="row">
+  <div class="col-lg-8 border"><app-testb></app-testb></div>
+  <div class="col-lg-8 border"><app-testb></app-testb></div>
+
+  <div class="col-lg-12">{{title}}</div>
+
+</div>
